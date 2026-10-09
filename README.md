@@ -11,7 +11,16 @@ kinds:
   testing how a vehicle reacts to someone stepping onto the road at a chosen
   moment.
 
-![Periodic pedestrians](docs/gui-periodic.png)
+<table>
+  <tr>
+    <td><img src="docs/gazebo-periodic.jpg" alt="Periodic pedestrians in Gazebo"></td>
+    <td><img src="docs/gazebo-trigger.jpg" alt="Trigger pedestrian crossing the road in Gazebo"></td>
+  </tr>
+  <tr>
+    <td align="center">Periodic pedestrians</td>
+    <td align="center">Trigger pedestrian</td>
+  </tr>
+</table>
 
 ## Usage
 
@@ -30,7 +39,7 @@ python3 gazebo_pedestrian_injector.py add-trigger  track.world jaywalker  --star
 `--offset` starts a walker part-way through its loop, so several walkers do
 not move in step. `--wait-start` and `--wait-end` add pauses at each end.
 
-![Trigger pedestrians](docs/gui-trigger.png)
+![Editor window](docs/gui-periodic.png)
 
 ## Trigger pedestrians
 
