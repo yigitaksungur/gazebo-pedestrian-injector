@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(pedestrian_collision_plugin CXX)
+
+find_package(gazebo REQUIRED)
+
+add_library(pedestrian_collision_plugin SHARED pedestrian_collision_plugin.cc)
+target_include_directories(pedestrian_collision_plugin PRIVATE ${GAZEBO_INCLUDE_DIRS})
+target_link_libraries(pedestrian_collision_plugin ${GAZEBO_LIBRARIES})
+set_target_properties(pedestrian_collision_plugin PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
+
+install(TARGETS pedestrian_collision_plugin LIBRARY DESTINATION lib)
