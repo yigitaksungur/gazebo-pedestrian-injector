@@ -43,11 +43,12 @@ python3 gazebo_pedestrian_injector.py run track.world
 
 Each trigger pedestrian uses these topics:
 
-| Topic | Type | |
+| Topic | Type | Purpose |
 |---|---|---|
 | `/<name>/trigger` | `std_msgs/Empty` | walk to the other end |
 | `/<name>/state` | `std_msgs/String` | `at_a`, `at_b`, `to_a`, `to_b` (latched) |
-| `/<name>/cmd_vel`, `/<name>/odom` | | to and from `libgazebo_ros_planar_move` |
+| `/<name>/cmd_vel` | `geometry_msgs/Twist` | sent to `libgazebo_ros_planar_move` |
+| `/<name>/odom` | `nav_msgs/Odometry` | received from `libgazebo_ros_planar_move` |
 
 A test node can trigger a pedestrian when the vehicle passes a given point
 and wait for `at_b`, so the scenario does not depend on someone pressing a
